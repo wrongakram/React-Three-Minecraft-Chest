@@ -17,13 +17,13 @@ const Item = ({ item, position, inventoryType }) => {
   const itemVisual = require(`../assets/items/${item.item}.svg`);
   return (
     <>
-      <DragPreviewImage connect={connectDragPreview} src={itemVisual.default} />
+      <DragPreviewImage connect={connectDragPreview} src={itemVisual} />
       <div
         ref={drag}
         style={{
           opacity: isDragging ? 0 : 1,
         }}>
-        <img src={itemVisual.default} alt={itemVisual} />
+        <img src={itemVisual} alt={itemVisual} />
       </div>
     </>
   );
